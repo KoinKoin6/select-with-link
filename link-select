@@ -1,0 +1,43 @@
+
+<div class="select">
+    <select name="slct" id="slct" onchange="if (this.value) window.location.href=this.value">
+      <option>Selecione</option>
+      <option value="/blog">Aku no Higan</option>
+      <option value="/contato">Donten ni Warau</option>
+    </select>
+</div>
+
+<!--- 
+      onchange="if (this.value) window.location.href=this.value" 
+        Esse código ele é muito mais funcional que os dois exemplos abaixo.
+        Com ele é possivel criar links sem a necessidade de uma URL.
+        Simples, e eficiente! Especialmente para Wordpress.
+ --->
+
+
+
+<!---
+<script>
+    jQuery(function($) {
+        $('select').on('change', function() {
+            var url = $(this).val();
+            if (url) {
+                window.location = url;
+            }
+            return false;
+        });
+    });
+</script>
+
+== Funcionalidades == 
+$(function(){
+      // Ligar evento de mudança para selecionar
+      $('#dynamic_select').on('change', function () {
+          var url = $(this).val(); // Obtém o valor selecionado
+          if (url) { // require a URL
+              window.location = url; // Redirecionamento
+          }
+          return false;
+      });
+    });
+--->
